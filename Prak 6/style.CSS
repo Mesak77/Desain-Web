@@ -1,0 +1,74 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(https://asset.kompas.com/crops/r1vncaesnXb8dOUWbp1dVQ6gwmA=/0x0:540x360/1200x800/data/photo/2024/04/22/66260dc2d87cc.jpg);
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    background-size: cover;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.weather-info h2::before { content: '☀'; }
+.weather-info p:nth-child(2)::before { content: '🌡'; }
+.weather-info p:nth-child(3)::before { content: '🌤'; }
+.weather-info p:nth-child(4)::before { content: '💨'; }
+.weather-info p:nth-child(5)::before { content: '💧'; }
+.weather-info, .forecast {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto 30px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.weather-info p, .day p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.day {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    width: 150px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.day img {
+    width: 50px;
+    height: 50px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .forecast {
+        flex-direction: column;
+        align-items: center;
+    }
+    .day {
+        width: 80%;
+    }
+}
